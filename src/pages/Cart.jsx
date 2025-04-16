@@ -10,7 +10,8 @@ import { CartContext } from '../context/CartContext';
 const Container = styled.div``;
 
 const Wrapper = styled.div`
-  padding: 30px;
+  padding: 50px;
+  margin-top: 20px;
   ${mobile({ padding: "10px" })}
 `;
 

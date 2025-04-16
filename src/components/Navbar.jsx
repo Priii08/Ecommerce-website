@@ -10,9 +10,10 @@ const Container = styled.div`
   top:0;
   left:0;
   width:98%;
+  height: 60px;
   background-color: #fff; 
   box-shadow: 0px 4px 2px -2px gray; 
-  z-index: 1000;  
+  z-index: 100;  
   padding: 10px 20px;  
   ${mobile({ height: "auto" })}
 `;
