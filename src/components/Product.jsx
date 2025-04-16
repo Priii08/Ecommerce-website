@@ -1,5 +1,9 @@
 import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from "@mui/icons-material"
 import styled from "styled-components"
+import React, { useContext } from "react";
+import { CartContext } from "../context/CartContext";
+
+
 
 const Info= styled.div`
 opacity: 0;
@@ -67,24 +71,26 @@ transition: all 0.5s ease;
 `;
 
 
-const Product = ({item}) => {
+const Product = ({ item }) => {
+  const { addToCart } = useContext(CartContext); // ✅ grab addToCart from context
+
   return (
     <Container>
-      <Circle/>
-      <Image src={item.img}/>
+      <Circle />
+      <Image src={item.img} />
       <Info>
-        <Icon>
-          <ShoppingCartOutlined/>
+        <Icon onClick={() => addToCart(item)}> {/* ✅ add click handler */}
+          <ShoppingCartOutlined />
         </Icon>
         <Icon>
-          <SearchOutlined/>
+          <SearchOutlined />
         </Icon>
         <Icon>
-          <FavoriteBorderOutlined/>
+          <FavoriteBorderOutlined />
         </Icon>
       </Info>
     </Container>
-  )
-}
+  );
+};
 
 export default Product

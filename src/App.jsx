@@ -6,19 +6,22 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 import Navbar from "./components/Navbar";
+import { CartProvider } from "./context/CartContext";
 
 
 const App = () => {
   const [page, setPage] = useState("home");
 
   return (
-    <div>
-      <Navbar onNavigate={setPage} />
-      {page === "home" && <Home />}
-      {page === "register" && <Register />}
-      {page === "login" && <Login />}
-      {page === "cart" && <Cart />}
-    </div>
+    <CartProvider>
+      <div>
+        <Navbar onNavigate={setPage} />
+        {page === "home" && <Home />}
+        {page === "register" && <Register />}
+        {page === "login" && <Login />}
+        {page === "cart" && <Cart />}
+      </div>
+    </CartProvider>
   );
 };
 
