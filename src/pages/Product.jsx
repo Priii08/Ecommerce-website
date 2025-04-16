@@ -6,8 +6,6 @@ import Footer from "../components/Footer";
 import { Add, Padding, Remove } from "@mui/icons-material";
 import { mobile } from "../responsive";
 
-
-
 const Container = styled.div``;
 
 const Wrapper = styled.div`
@@ -17,7 +15,7 @@ ${mobile({Padding: "10px", flexDirection:"column"})}
 `;
 
 const ImgContainer = styled.div`
-flex:1;
+flex: 1;
 `;
 
 const Image = styled.img`

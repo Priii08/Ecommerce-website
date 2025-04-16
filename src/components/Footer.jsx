@@ -2,11 +2,11 @@ import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter } fro
 import styled from "styled-components"
 import { mobile } from "../responsive";
 
-
 const Container = styled.div`
 display: flex;
 ${mobile({flexDirection: "column"})}
 `;
+
 const Left = styled.div`
 flex:1;
 display: flex;
@@ -14,7 +14,8 @@ flex-direction: column;
 padding: 20px;
 `;
 
-const Logo =  styled.h1``;
+const Logo = styled.h1`
+`;
 
 const Desc = styled.p`
 margin: 20px 0px;
@@ -42,24 +43,22 @@ padding: 20px;
 ${mobile({display: "none"})}
 `;
 
-const Title=styled.h3`
+const Title = styled.h3`
 margin-bottom: 30px;
 `;
  
 const List = styled.ul`
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const ListItem = styled.li`
 width: 50%;
 margin-bottom: 10px;
-    
 `;
-
 
 const Right = styled.div`
 flex:1;
@@ -113,12 +112,10 @@ const Footer = () => {
             <ListItem>Order Tracking</ListItem>
             <ListItem>Wishlist</ListItem>
             <ListItem>Terms</ListItem>
-            
         </List>
 
       </Center>
       <Right>
-
         <Title>Contact</Title>
         <ContactItem><Room style={{marginRight:"10px"}}/>
             gurgaon , New Delhi 122017
@@ -130,7 +127,6 @@ const Footer = () => {
             contact@lama.gmail.com
         </ContactItem>
         <Payment src="/pictures/payment.png"/>
-
       </Right>
     </Container>
   );
